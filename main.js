@@ -9,6 +9,7 @@ const iconsRes = document.getElementById("iconsRes");
 let botPlay;
 let player;
 let result = document.createElement("h2");
+let vs = document.createElement("h2");
 
 // event listeners
 rock.addEventListener("click", function () {
@@ -28,7 +29,13 @@ rock.addEventListener("click", function () {
   replay.innerHTML = "Replay";
   iconsRes.appendChild(replay);
   replay.addEventListener("click", () => {
-    window.location.reload();
+    const resetIcons = document.querySelectorAll("#iconsRes > i, h2, button")
+    for (let i = 0; i < resetIcons.length; i++) {
+      resetIcons[i].remove();
+    }
+    iconsRes.appendChild(rock);
+    iconsRes.appendChild(paper);
+    iconsRes.appendChild(scissors);
   });
 });
 paper.addEventListener("click", () => {
@@ -48,7 +55,13 @@ paper.addEventListener("click", () => {
   replay.innerHTML = "Replay";
   iconsRes.appendChild(replay);
   replay.addEventListener("click", () => {
-    window.location.reload();
+    const resetIcons = document.querySelectorAll("#iconsRes > i, h2, button")
+    for (let i = 0; i < resetIcons.length; i++) {
+      resetIcons[i].remove();
+    }
+    iconsRes.appendChild(rock);
+    iconsRes.appendChild(paper);
+    iconsRes.appendChild(scissors);
   });
 });
 scissors.addEventListener("click", () => {
@@ -68,7 +81,13 @@ scissors.addEventListener("click", () => {
   replay.innerHTML = "Replay";
   iconsRes.appendChild(replay);
   replay.addEventListener("click", () => {
-    window.location.reload();
+    const resetIcons = document.querySelectorAll("#iconsRes > i, h2, button")
+    for (let i = 0; i < resetIcons.length; i++) {
+      resetIcons[i].remove();
+    }
+    iconsRes.appendChild(rock);
+    iconsRes.appendChild(paper);
+    iconsRes.appendChild(scissors);
   });
 });
 
@@ -148,7 +167,6 @@ const botChooseIcons = () => {
 };
 
 const vsFunc = () => {
-  const vs = document.createElement("h2");
   vs.setAttribute("class", "vs");
   vs.innerHTML = "VS";
   iconsRes.appendChild(vs);

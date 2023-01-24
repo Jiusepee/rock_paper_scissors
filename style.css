@@ -27,6 +27,10 @@ body {
   justify-content: center;
   align-items: center;
 }
+#smaller{
+  color: white;
+  font-size: 30px;
+}
 .fa-regular {
   font-size: 130px;
   margin: 10px;
@@ -67,6 +71,7 @@ body {
 }
 .replay:hover{
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 /* borders */
